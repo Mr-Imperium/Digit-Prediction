@@ -10,7 +10,9 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
 # Load the model
-model = load_model("digit_model.pth")
+from model import load_model
+model = load_model("ml_with_pytorch_model.pth")
+print("Model loaded successfully.")
 
 # Preprocessing for images
 def preprocess_image(image_path):
